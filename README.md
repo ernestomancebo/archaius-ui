@@ -1,2 +1,2 @@
 # archaius-ui
-This is the user interface for  netfilx archaius
+This is the user interface for  netflix archaius
