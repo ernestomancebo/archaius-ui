@@ -29,6 +29,7 @@ build/Release
 # Dependency directories
 node_modules
 jspm_packages
+materialize-src
 
 # Optional npm cache directory
 .npm
@@ -47,3 +48,12 @@ dist
 
 # Mac files
 .DS_Store
+
+#SASS metadata
+.sass-cache/
+
+#Generated CSS
+styles/*
+
+#Fonts files
+fonts/*
