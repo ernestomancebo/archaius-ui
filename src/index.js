@@ -1,11 +1,10 @@
 /*eslint-disable import/default */
-
 import 'babel-polyfill';
 import React from 'react';
 import {render} from 'react-dom';
-// import configureStore from './store/configureStore';
+import configureStore from './store/configureStore';
+import {loadDatabase} from './actions/databaseActions';
 import {Provider} from 'react-redux';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import {Router, browserHistory} from 'react-router';
 import routes from './routes';
 import '../styles/materialize.css';
@@ -14,14 +13,12 @@ import 'jquery';
 import 'hammerjs';
 import '../styles/js/bin/materialize';
 
-// const store = configureStore();
-// store.dispatch(/*sumthing*/);
+const store = configureStore();
+store.dispatch(loadDatabase());
 
 render(
-  <Provider>
-    <MuiThemeProvider>
+  <Provider store={store}>
       <Router history={browserHistory} routes={routes} />
-    </MuiThemeProvider>
   </Provider>,
   document.getElementById('app')
 );
