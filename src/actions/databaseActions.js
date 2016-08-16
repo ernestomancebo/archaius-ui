@@ -26,9 +26,8 @@ export function loadDatabasesSuccess(databases) {
 export function loadDatabase() {
   return function(dispatch) {
     dispatch(beginAjaxCall());
-    return databaseApi.getAllDatabases().then(database => {
-      debugger;
-      dispatch(loadDatabasesSuccess(database));
+    return databaseApi.getAllDatabases().then(databases => {
+      dispatch(loadDatabasesSuccess(databases));
     }).catch(error => {
       throw(error);
     });

@@ -14,7 +14,7 @@ const DatabaseList = ({databases}) => {
       </thead>
       <tbody>
       {databases.map(database =>
-        <DatabaseListRow key={database.id} database={database} />
+        <DatabaseListRow database={database} />
       )}
       </tbody>
     </table>

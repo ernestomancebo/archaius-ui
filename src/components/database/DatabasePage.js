@@ -10,7 +10,7 @@ class DatabasePage extends React.Component {
   constructor(props, context) {
     super(props, context);
 
-    var me = this;
+    let me = this;
 
     me.state = {
       database: {name: ""}
@@ -24,7 +24,7 @@ class DatabasePage extends React.Component {
   }
 
   render() {
-    var me = this;
+    let me = this;
     const {databases} = me.props;
 
     return (
@@ -34,11 +34,11 @@ class DatabasePage extends React.Component {
           type="submit"
           value="Add Data Base"
           className="waves-effect waves-light btn"
-          onclick="redirectToAddDatabasePage"
+          onClick={me.redirectToAddDatabasePage}
         />
         <DatabaseList databases={databases} />
       </div>
-    )
+    );
   }
 }
 

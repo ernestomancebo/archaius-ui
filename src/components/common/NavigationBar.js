@@ -6,7 +6,6 @@ const navBar = () => (
         <li><a href="#!">First Sidebar Link</a></li>
         <li><a href="#!">Second Sidebar Link</a></li>
       </ul>
-      <a href="#" data-activates="slide-out" className="button-collapse"><i className="material-icons">menu</i></a>
     </div>
 );
 

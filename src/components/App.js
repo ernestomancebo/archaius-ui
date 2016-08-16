@@ -9,7 +9,9 @@ class App extends React.Component {
       <div>
         <Header />
         <NavBar />
-        {this.props.children}
+        <main className="container">
+          {this.props.children}
+        </main>
       </div>
     );
   }

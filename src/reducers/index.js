@@ -1,9 +1,11 @@
 // Set up your root reducer here...
 import { combineReducers } from 'redux';
-import database from './databaseReducer';
+import databases from './databaseReducer';
+import ajaxCallsInProgress from './ajaxStatusReducer';
 
 const rootReducer = combineReducers({
-  database
+  databases,
+  ajaxCallsInProgress
 });
 
 export default rootReducer;

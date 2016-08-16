@@ -1,5 +1,5 @@
 $header-size: 64px;
-$navbar-width: 300px;
+$navbar-width: 195px;
 
 main, footer {
   padding-left: $navbar-width;
@@ -15,6 +15,7 @@ html {
 
 .side-nav {
   margin-top: $header-size;
+  width: $navbar-width;
 }
 
 .icon-block {
